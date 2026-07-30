@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Lập Trình - Ghi Chú Học Tập</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top-bar tối giản, không gắn thương hiệu CodeES -->
+    <div class="cv-topbar">
+        <a href="index.html" class="cv-back-link">← Về trang chính</a>
+    </div>
+
+    <section class="page-section" id="view-blog">
+        <div class="blog-header">
+            <h1 class="blog-title">Ghi chú &amp; Tips lập trình</h1>
+            <p class="blog-subtitle">// Những gì mình học được trong quá trình tự học lập trình — viết lại cho dễ nhớ, và để chia sẻ với ai đang học cùng.</p>
+        </div>
+
+        <div class="blog-list" id="blog-list">
+
+            <article class="blog-post">
+                <div class="blog-post-meta">
+                    <span class="lang-tag">C++</span>
+                    <span class="blog-post-date">15/07/2026</span>
+                </div>
+                <h2 class="blog-post-title">Hiểu Stack qua bài toán đổi cơ số</h2>
+                <p class="blog-post-excerpt">
+                    Khi làm bài đổi một số từ hệ thập phân sang hệ nhị phân/bát phân, mình hay quên là các số dư
+                    phải được đọc ngược lại mới ra kết quả đúng. Đây chính là lý do Stack (LIFO — vào sau ra trước)
+                    hợp với bài này hơn hẳn so với dùng mảng thường: mỗi lần chia lấy dư, mình đẩy (push) số dư vào
+                    stack; đến khi chia hết, mình lần lượt lấy ra (pop) để in ra kết quả theo đúng chiều.
+                </p>
+                <div class="blog-post-tip">
+                    <b>💡 Mẹo nhớ:</b> Nếu thấy đề bài yêu cầu "đảo ngược thứ tự" một dãy giá trị được sinh ra tuần tự,
+                    gần như chắc chắn Stack sẽ là cấu trúc dữ liệu phù hợp.
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-meta">
+                    <span class="lang-tag">HTML</span>
+                    <span class="blog-post-date">08/07/2026</span>
+                </div>
+                <h2 class="blog-post-title">5 thẻ HTML mới học mà hay dùng nhất</h2>
+                <p class="blog-post-excerpt">
+                    Lúc mới học HTML trên W3Schools, mình từng nghĩ càng nhiều thẻ càng khó nhớ. Nhưng thực ra chỉ
+                    cần nắm chắc một nhóm nhỏ là đã dựng được phần lớn bố cục trang web: <code>&lt;div&gt;</code> để
+                    chia khối, <code>&lt;section&gt;</code> để nhóm nội dung có ý nghĩa, <code>&lt;ul&gt;/&lt;li&gt;</code>
+                    cho danh sách, <code>&lt;a&gt;</code> để liên kết trang, và <code>&lt;form&gt;</code> khi cần người
+                    dùng nhập liệu.
+                </p>
+                <div class="blog-post-tip">
+                    <b>💡 Mẹo nhớ:</b> Học thẻ HTML nên đi kèm ví dụ chạy thật, đừng học thẻ rỗng — nhìn kết quả hiển
+                    thị ra sao sẽ nhớ lâu hơn nhiều so với học thuộc cú pháp.
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-meta">
+                    <span class="lang-tag">CSS</span>
+                    <span class="blog-post-date">02/07/2026</span>
+                </div>
+                <h2 class="blog-post-title">Flexbox: chỉ cần nhớ 2 câu hỏi</h2>
+                <p class="blog-post-excerpt">
+                    Mỗi lần dùng Flexbox để căn giữa, mình chỉ cần tự hỏi 2 câu: "trục chính đang nằm ngang hay dọc?"
+                    (quyết định bởi <code>flex-direction</code>), và "mình đang muốn canh theo trục chính
+                    (<code>justify-content</code>) hay trục phụ (<code>align-items</code>)?". Trả lời được 2 câu này
+                    là gần như luôn ra được bố cục mình muốn mà không cần đoán mò.
+                </p>
+                <div class="blog-post-tip">
+                    <b>💡 Mẹo nhớ:</b> Muốn căn giữa hoàn toàn một phần tử trong khối cha, chỉ cần
+                    <code>display: flex; justify-content: center; align-items: center;</code> trên phần tử cha.
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-meta">
+                    <span class="lang-tag">JavaScript</span>
+                    <span class="blog-post-date">25/06/2026</span>
+                </div>
+                <h2 class="blog-post-title">localStorage: cách lưu dữ liệu đơn giản không cần server</h2>
+                <p class="blog-post-excerpt">
+                    Khi làm CodeES, mình cần lưu tài khoản, điểm số, bài đăng thảo luận mà chưa có server thật.
+                    Giải pháp là <code>localStorage</code> — nó cho phép lưu dữ liệu dạng chuỗi ngay trên trình
+                    duyệt của người dùng, tồn tại kể cả sau khi tắt tab. Vì chỉ lưu được chuỗi, nên mỗi lần lưu object
+                    phải dùng <code>JSON.stringify()</code>, và khi đọc lại phải <code>JSON.parse()</code> để chuyển
+                    về đúng dạng object/array ban đầu.
+                </p>
+                <div class="blog-post-tip">
+                    <b>💡 Mẹo nhớ:</b> localStorage chỉ tồn tại trên máy và trình duyệt hiện tại của người dùng —
+                    không phải giải pháp để nhiều người cùng xem chung 1 dữ liệu, muốn vậy phải có server thật.
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-meta">
+                    <span class="lang-tag">Học tập</span>
+                    <span class="blog-post-date">18/06/2026</span>
+                </div>
+                <h2 class="blog-post-title">Cách mình duy trì việc tự học lập trình mỗi ngày</h2>
+                <p class="blog-post-excerpt">
+                    Thay vì đặt mục tiêu mơ hồ kiểu "học lập trình giỏi hơn", mình chia nhỏ thành từng buổi 30-45 phút
+                    với một sản phẩm cụ thể cần hoàn thành, ví dụ "hôm nay làm xong phần tính điểm gõ code". Có sản
+                    phẩm thật để nhìn thấy sau mỗi buổi học giúp mình có động lực hơn nhiều so với chỉ đọc lý thuyết
+                    hay làm bài tập rời rạc không liên quan đến nhau.
+                </p>
+                <div class="blog-post-tip">
+                    <b>💡 Mẹo nhớ:</b> Một dự án nhỏ nhưng chạy được từ đầu đến cuối sẽ dạy nhiều hơn hàng chục bài
+                    tập lẻ tẻ không ghép lại thành gì cả.
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="cv-footer">
+        <p>© 2026 · Blog cá nhân của Lê Nguyễn Anh Khoa</p>
+    </footer>
+</body>
+</html>
